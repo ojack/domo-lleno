@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/BlairMdITCTTMedium.19bcef74.woff"
   },
   {
-    "revision": "3951f421bbf8c1c0aa8f",
-    "url": "/static/css/main.04a34bc1.chunk.css"
+    "revision": "0032ee84a94e86ff47ab",
+    "url": "/static/css/main.2027f5dd.chunk.css"
   },
   {
     "revision": "ddfaf04d9e82e76546fe",
@@ -24,27 +24,27 @@ self.__precacheManifest = [
     "url": "/static/media/BlairMdITCTTMedium.eb3b6ca4.woff2"
   },
   {
-    "revision": "3951f421bbf8c1c0aa8f",
-    "url": "/static/js/main.3951f421.chunk.js"
+    "revision": "0032ee84a94e86ff47ab",
+    "url": "/static/js/main.0032ee84.chunk.js"
   },
   {
     "revision": "350806ee727260f1768a909946c11915",
     "url": "/static/media/blairitc-light-webfont.350806ee.woff2"
   },
   {
-    "revision": "e30c7631bb9c404219585bc51f6d1e88",
-    "url": "/static/media/blairitc-light-webfont.e30c7631.woff"
-  },
-  {
     "revision": "87aa48ad6e032eb6c7f8bb74e50b9d67",
     "url": "/static/media/blair-itc-bold-webfont.87aa48ad.woff2"
+  },
+  {
+    "revision": "e30c7631bb9c404219585bc51f6d1e88",
+    "url": "/static/media/blairitc-light-webfont.e30c7631.woff"
   },
   {
     "revision": "b8b3c22fce26c2fb2b6aac4ce7a59660",
     "url": "/static/media/blair-itc-bold-webfont.b8b3c22f.woff"
   },
   {
-    "revision": "ef9a78899a9f8d0b9d12330567b86169",
+    "revision": "ed3b6b4d5533af0eae7a801a2a6941d8",
     "url": "/index.html"
   }
 ];
