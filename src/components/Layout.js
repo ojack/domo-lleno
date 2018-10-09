@@ -16,7 +16,7 @@ const Layout = props => (
         <div className="max-w-3xl m-auto" >
           <Menu />
           {props.children}
-          <Footer />
+          <Footer organizadores={props.organizadores}/>
         </div>
     </div>
 );

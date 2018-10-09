@@ -6285,6 +6285,33 @@ html {
   backgroundRepeat: 'no-repeat';
 } */
 
+.example-enter {
+  opacity: .01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: .01;
+  transition: opacity 300ms ease-in;
+}
+
+.example-appear {
+  opacity: .01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
 .opacity {
   opacity: 1;
   transition: opacity 1000ms ease-in;
@@ -6297,6 +6324,19 @@ html {
 
 .menu {
   transition: margin-top 500ms ease-in;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  /* background-color: white; */
+  color: #ccc;
+}
+
+body::-webkit-scrollbar-track-piece {
+  display: none;
 }
 
 /* .example-enter {
@@ -6335,6 +6375,30 @@ html {
 .artista {
   opacity: .001;
   transition: opacity 500ms ease-in;
+}
+
+.image-50 {
+  width: 100%;
+  height: auto;
+}
+
+.image-50 {
+  /* -webkit-transform: scale(0.5);
+     -moz-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+       -o-transform: scale(0.5);
+          transform: scale(0.5);
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand'); */
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
 }
 
 @media (min-width: 576px) {

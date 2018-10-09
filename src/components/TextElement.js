@@ -10,10 +10,10 @@ import React, { Component } from "react";
 class TextElement extends Component {
     render() {
         console.log('TextElement', this.props)
-        let TitleClass = 'font-menu -mt-20 uppercase mb-16 text-3xl whitespace-no-wrap'
+        let TitleClass = 'font-menu -mt-20 uppercase mb-16 text-2xl sm:text-3xl whitespace-no-wrap'
 
         var image = this.props.post.acf.imagen ? 'url('+ this.props.post.acf.imagen.sizes.large +')' : '#222'
-        var containerClass = "text-sm text-left flex-1 flex flex-col md:flex-row block m-6 font-hairline leading-loose mt-20 p-8"
+        var containerClass = "text-sm text-left flex-1 flex flex-col md:flex-row block m-6 font-hairline leading-loose mt-20 p-2 sm:p-8"
         console.log("POST", this.props.post.acf.text_alignment)
         if(this.props.post.acf && this.props.post.acf.text_alignment) {
 

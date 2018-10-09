@@ -11,7 +11,10 @@ import Festivales from './components/Festivales.js'
 import Programacion from './components/Programacion.js'
 import ComoParticipar from './components/ComoParticipar.js'
 import Wrapper from './components/Wrapper.js'
-import Artistas from './components/ImageGrid.js'
+import Artistas from './components/Artistas.js'
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
+//import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 
 const apiUrl = 'http://api.domolleno.gov.co/wp-json/wp/v2'
 
@@ -38,13 +41,15 @@ class App extends Component {
     menuComponents.forEach((item) => {
       menuObj[item.route] = { posts: []}
     })
+    menuObj.escenarios = { posts: []}
+    menuObj.organizadores = { posts: []}
     return menuObj
   }
 
   getRoutes() {
     return <Switch>
       {menuComponents.map((item) => <Route path={'/'+item.route}>
-        <item.component posts={this.state.categories[item.route].posts}/>
+        <item.component posts={this.state.categories[item.route].posts} escenarios={this.state.categories.escenarios.posts}/>
     </Route>)}</Switch>
   }
 
@@ -56,28 +61,36 @@ class App extends Component {
       .get(apiUrl + '/categories')
       .end((err, res) => {
       //  console.log('categories', res.body)
-        if(res.body.length > 0) {
-          res.body.forEach((category) => {
-            categories[category.id] = Object.assign({}, category, {posts: []})
-            categoryBySlug[category.slug] = categories[category.id]
-          })
-
-          request
-            .get(apiUrl + '/posts?per_page=99')
-            .end((err, res) => {
-              //console.log('posts', res.body)
-              res.body.forEach((post) => {
-                if (post.categories.length > 0) {
-                //  console.log('id is', post.categories[0], categories[post.categories[0]])
-                  categories[post.categories[0]].posts.push(post)
-                }
-              })
-              self.setState({ categories: categoryBySlug, loaded: true})
-              //console.log('posts', categoryBySlug)
-              console.log('CAT', categoryBySlug)
-            })
+        if(err){
+          console.log('error', err)
         } else {
-          console.log('error fetching categories')
+          if(res.body.length > 0) {
+            res.body.forEach((category) => {
+              categories[category.id] = Object.assign({}, category, {posts: []})
+              categoryBySlug[category.slug] = categories[category.id]
+            })
+
+            request
+              .get(apiUrl + '/posts?per_page=99')
+              .end((err, res) => {
+                if(err) {
+                  console.log("ERRER", err)
+                } else {
+                //console.log('posts', res.body)
+                  res.body.forEach((post) => {
+                    if (post.categories.length > 0) {
+                    //  console.log('id is', post.categories[0], categories[post.categories[0]])
+                      categories[post.categories[0]].posts.push(post)
+                    }
+                  })
+                  self.setState({ categories: categoryBySlug, loaded: true})
+                  //console.log('posts', categoryBySlug)
+                  console.log('CAT', categoryBySlug)
+                  }
+                })
+          } else {
+            console.log('error fetching categories')
+          }
         }
       })
 
@@ -97,13 +110,16 @@ class App extends Component {
 
 
           <Wrapper>
-            <Switch>
-            <Route exact path="/" component={Intro} />
-            <Layout>
-              {this.getRoutes()}
+          <Route render={({ location }) => (
 
-            </Layout>
-              </Switch>
+              <Switch>
+                <Route exact path="/" component={Intro} key="intro"/>
+                <Layout key="layout" organizadores={this.state.categories.organizadores.posts}>
+                  {this.getRoutes()}
+
+                </Layout>
+                </Switch>
+              )} />
           </Wrapper>
 
       </Router>

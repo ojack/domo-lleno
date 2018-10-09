@@ -3,9 +3,15 @@ import { Link } from "react-router-dom"
 import logo from './../images/logo-menu.png'
 //import { Config } from "../config.js";
 
-const linkClass = "flex-1 text-sm p-2 w-64 flex-1 m-auto text-white hover:text-grey uppercase font-menu no-underline"
+const linkClass = "flex-initial text-sm p-0 self-center align-center justify-center w-64 m-0 mt-4 lg:mt-0 text-white hover:text-grey uppercase font-menu no-underline"
 
 const menuList = [
+  {
+    ID: 0,
+    object: 'category',
+    title: '¿Qué es Domo LLeno?',
+    url: '/inicio'
+  },
   {
     ID: 1,
     object: 'category',
@@ -29,6 +35,12 @@ const menuList = [
     object: 'category',
     title: '¿Cómo Participar?',
     url: '/como-participar'
+  },
+  {
+    ID: 5,
+    object: 'category',
+    title: 'Talleres y Conferencias',
+    url: '/inicio'
   }
 ]
 
@@ -49,13 +61,17 @@ class Menu extends Component {
             <Link
                 to={item.url}
                 key={item.ID}
+                className={linkClass}
+                style= {{
+                  minWidth: '280px'
+                }}
             >
-                <a className={linkClass}>{item.title}</a>
+                <div className="align-center">{item.title}</div>
             </Link>
         );
     });
 
-    var menuClass = "flex flex-col md:flex-row menu"
+    var menuClass = "flex flex-col md:flex-row menu mb-10"
     // if(this.state.active === true) {
       menuClass +=  " mt-8"
     // } else {
@@ -63,8 +79,8 @@ class Menu extends Component {
     // }
     return(
       <div className = {menuClass} key="main-menu">
-          <Link to='/inicio'>
-            <div className = "flex-1 h-full cursor-pointer m-3"
+          <Link to='/' className = "flex-1 h-full cursor-pointer m-3 mt-0">
+            <div
                 style={{
                   background: "url("+logo+")",
                   minHeight: '100px',
@@ -75,7 +91,7 @@ class Menu extends Component {
                 }}>
             </div>
           </Link>
-          <div className = "ml-12 flex-2.5 h-100 w-100 flex flex-col sm:flex-row sm:flex-wrap">
+          <div className = "ml-12 flex-2.5 h-100 w-100 p-4 flex flex-col sm:flex-row sm:flex-wrap">
             {menuItems}
           </div>
       </div>

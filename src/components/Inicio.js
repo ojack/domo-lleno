@@ -10,7 +10,7 @@ import TextElement from "./TextElement.js"
 class Inicio extends Component {
     render() {
       console.log('props',this.props)
-        let TitleClass = 'font-menu -mt-20 uppercase mb-16 text-md whitespace-no-wrap'
+        let TitleClass = 'font-menu text-left uppercase mb-2 text-3xl whitespace-no-wrap mt-16 p-6'
 
         // <div className="flex flex-row-reverse">
         //   {this.props.escenarios.map((escenario) => <div>
@@ -18,10 +18,10 @@ class Inicio extends Component {
         //   </div>)}
         // </div>
 
-        return (
-        
-            <div className="flex flex-col-reverse max-w-3xl pt-8">
 
+        return (
+          <div className="p-3">
+            <div className="flex flex-col-reverse max-w-3xl pt-12">
                 {this.props.posts.map((post, index) => {
                   if(post.acf && post.acf.imagen) {
                   //  console.log('img is', post.acf)
@@ -31,8 +31,33 @@ class Inicio extends Component {
                   }
                 })
                 }
-
             </div>
+            <div>
+            <div className={TitleClass}> Escenarios</div>
+
+              <div className="flex flex-col-reverse md:flex-row-reverse max-w-3xl">
+                  {this.props.escenarios.map((post, index) =>
+                    //if(post.acf && post.acf.imagen) {
+                    //  console.log('img is', post.acf)
+                      (
+                        <div className="flex-1 p-4">
+                          <div className="flex-1" style={{
+                            background: 'url('+ post.acf.imagen.sizes['medium_large'] + ')',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'right top',
+                            minHeight: '300px'
+                          }}>
+                          </div>
+
+                          <div className="font-menu mt-3 text-lg text-left"> {post.title.rendered}</div>
+                        </div>
+                      )
+                  )
+                  }
+              </div>
+            </div>
+          </div>
         );
     }
 }

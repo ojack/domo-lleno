@@ -22,8 +22,8 @@ class ImageContainer extends Component {
     }
     render() {
             var post = this.props.post
-            console.log("RENDERINF", post)
-            var containerClass = "w-100 md:w-1/3 sm:w-1/2 cursor-pointer artista-container"
+          //  console.log("RENDERINF", post)
+            var containerClass = "w-100 cursor-pointer artista-container"
 
 
             var background = post.acf.image.sizes?'url('+post.acf.image.sizes.large+')':'#222'
@@ -58,7 +58,7 @@ class ImageContainer extends Component {
                               <div className="w-1/2 h-1/2 mb-10 bg-white pin-b pin-l"></div>
                             </div>
                           </div>
-                      
+
 
                 </div>
             )
