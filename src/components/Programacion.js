@@ -1,0 +1,22 @@
+import React, { Component } from "react";
+
+//import PageWrapper from "../components/PageWrapper.js";
+//import { Config } from "../config.js";
+//import { Title } from "../style-config.js";
+
+class Programacion extends Component {
+    render() {
+
+        return (
+            <div className="flex flex-col-reverse max-w-3xl items-center text-center">
+                {this.props.posts.map((post, index) => (
+                  <img className="flex-1 m-4 mb-12" src={post.acf.imagen.sizes.large} />
+                ))}
+                <img className="flex-1 max-w-md m-4 mb-10 mt-10" src='/static/images/programacion-fechas.png' />
+            </div>
+
+        );
+    }
+}
+
+export default Programacion;
