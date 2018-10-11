@@ -28,7 +28,7 @@ class Intro extends Component {
                         <div key="title-text-23" className='cursor-pointer'>
                         <div
                           style={{
-                            background: "url(/static/images/title-text-18.png)",
+                            background: "url(/static/images/title-text-v2.png)",
                             width: '50%',
                             height: '250px',
                             minHeight: '100px',
