@@ -22,7 +22,14 @@ const Footer = props => {
               </a>
 
             ))}
-            <div className="font-menu self-start flex-1 mr-8 ml-4 text-left"><div>Organizadores</div></div>
+            <div className="font-menu self-start flex-1 mr-8 ml-4 text-left">
+              <div>Organizadores</div>
+              <div className="mt-4" style={{
+                height: '1px',
+                backgroundColor: '#666',
+                width: '100px'
+              }}></div>
+            </div>
           </div>
 
       </div>

@@ -15,6 +15,8 @@ import colorShaders from './shaders/color.shader.js'
 
 const EffectComposer = EffectComp(THREE)
 
+const EXPLODE_MULTIPLE = 2.0
+
 export default containerElement => {
   const {
     renderer,
@@ -136,7 +138,7 @@ function animate(duration, direction) {
       }
     })
 
-    renderScene(progress*3.0)
+    renderScene(progress*EXPLODE_MULTIPLE)
     composer.render()
   }).start()
 

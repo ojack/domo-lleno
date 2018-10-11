@@ -53,7 +53,7 @@ class ImageContainer extends Component {
                           }}>
                               <div className="p-10 pin-b font-menu text-left w-100 uppercase pin-l pb-16 text-lg">
                                   <h3 >{post.title.rendered}</h3>
-                                  <h4 className="text-sm pt-2">{post.acf.pais}</h4>
+                                  <h4 className="text-sm pt-2">{"»  " + post.acf.pais}</h4>
                               </div>
                               <div className="w-1/2 h-1/2 mb-10 bg-white pin-b pin-l"></div>
                             </div>
