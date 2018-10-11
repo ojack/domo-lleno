@@ -9,7 +9,7 @@ const Footer = props => {
           <div className="flex flex-1 flex-row-reverse items-center flex-wrap">
 
             {props.organizadores.map((post, index) => (
-              <div className="flex-initial" style={{
+              <a href={post.acf.url} target="_blank" className="flex-initial" style={{
                 background: 'url('+ post.acf.logo.sizes.medium + ')',
                 backgroundSize: '80%',
                 backgroundRepeat: 'no-repeat',
@@ -19,7 +19,7 @@ const Footer = props => {
                 maxHeight: '160px',
                 maxWidth: '200px',
               }}>
-              </div>
+              </a>
 
             ))}
             <div className="font-menu self-start flex-1 mr-8 ml-4 text-left"><div>Organizadores</div></div>
