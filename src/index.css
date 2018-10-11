@@ -3008,7 +3008,7 @@ table {
 }
 
 .font-menu {
-  font-family: blair_itclight, BlairMdITC TT;
+  font-family: blair_itclight, BlairMdITC TT, system-ui, sans-serif;
 }
 
 .font-mono {
@@ -8784,7 +8784,7 @@ body::-webkit-scrollbar-track-piece {
   }
 
   .sm\:font-menu {
-    font-family: blair_itclight, BlairMdITC TT;
+    font-family: blair_itclight, BlairMdITC TT, system-ui, sans-serif;
   }
 
   .sm\:font-mono {
@@ -14404,7 +14404,7 @@ body::-webkit-scrollbar-track-piece {
   }
 
   .md\:font-menu {
-    font-family: blair_itclight, BlairMdITC TT;
+    font-family: blair_itclight, BlairMdITC TT, system-ui, sans-serif;
   }
 
   .md\:font-mono {
@@ -20024,7 +20024,7 @@ body::-webkit-scrollbar-track-piece {
   }
 
   .lg\:font-menu {
-    font-family: blair_itclight, BlairMdITC TT;
+    font-family: blair_itclight, BlairMdITC TT, system-ui, sans-serif;
   }
 
   .lg\:font-mono {
@@ -25644,7 +25644,7 @@ body::-webkit-scrollbar-track-piece {
   }
 
   .xl\:font-menu {
-    font-family: blair_itclight, BlairMdITC TT;
+    font-family: blair_itclight, BlairMdITC TT, system-ui, sans-serif;
   }
 
   .xl\:font-mono {

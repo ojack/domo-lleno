@@ -222,7 +222,9 @@ module.exports = {
     ],
     'menu': [
       'blair_itclight',
-      'BlairMdITC TT'
+      'BlairMdITC TT',
+      'system-ui',
+      'sans-serif'
     ],
     'mono': [
       'Menlo',

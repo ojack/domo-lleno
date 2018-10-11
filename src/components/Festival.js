@@ -8,7 +8,10 @@ import React, { Component } from "react";
 class Festival extends Component {
     render() {
         console.log('Festival', this.props)
-
+        if(this.props.post.title.rendered === '+Code') {
+          console.log('found + code')
+          this.props.post.title.rendered = '<span class="font-mono">+</span>Code'
+        }
         var image = this.props.post.acf.imagen ? 'url('+ this.props.post.acf.imagen.sizes.large +')' : '#222'
         return (
             <div className="flex-1 flex flex-col-reverse md:flex-row-reverse block mt-24 mb-24">
