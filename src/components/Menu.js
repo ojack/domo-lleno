@@ -40,7 +40,7 @@ const menuList = [
     ID: 5,
     object: 'category',
     title: 'Talleres y Conferencias',
-    url: '/inicio'
+    url: '/talleres'
   }
 ]
 

@@ -12,6 +12,7 @@ import Programacion from './components/Programacion.js'
 import ComoParticipar from './components/ComoParticipar.js'
 import Wrapper from './components/Wrapper.js'
 import Artistas from './components/Artistas.js'
+import Talleres from './components/Talleres.js'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 //import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
@@ -23,7 +24,8 @@ const menuComponents = [
   { route: 'festivales', component: Festivales},
   { route: 'como-participar', component: ComoParticipar},
   { route: 'programacion', component: Programacion},
-  { route: 'artistas', component: Artistas}
+  { route: 'artistas', component: Artistas},
+  { route: 'talleres', component: Talleres}
 ]
 
 class App extends Component {
