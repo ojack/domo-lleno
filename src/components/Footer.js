@@ -16,10 +16,17 @@ const Footer = props => {
               }}></div>
             </div>
             <div className="flex flex-1 flex-row-reverse items-center flex-wrap">
-              {props.organizadores.map((post, index) => (
-                <a href={post.acf.url} target="_blank" className="flex-1 m-5" style={{
+              {props.organizadores.map((post, index) => {
+                var size = "80%"
+                if(index == 0) {
+                  size = "95%"
+                } else if (index === props.organizadores.length - 1) {
+                  size = "auto 80%"
+                }
+
+                return  (<a href={post.acf.url} target="_blank" className="flex-1 m-1" key={"logo"+index} style={{
                   background: 'url('+ post.acf.logo.sizes.medium + ')',
-                  backgroundSize: 'contain',
+                  backgroundSize: size,
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
                    minHeight: '120px',
@@ -27,8 +34,8 @@ const Footer = props => {
                   // maxHeight: '100px',
                   // maxWidth: '240px',
                 }}>
-                </a>
-              ))}
+                </a>)
+              })}
             </div>
           </div>
           <div className="flex flex-col md:flex-row mt-12">
@@ -40,7 +47,7 @@ const Footer = props => {
                 width: '100px'
               }}></div>
             </div>
-            <div className="flex-initial text-left text-xl mt-8 ml-8"> domolleno@gmail.com </div>
+            <a className="flex-initial text-left text-xl mt-8 ml-8" href="mailto:domolleno@gmail.com"> domolleno@gmail.com </a>
           </div>
       </div>
     )
