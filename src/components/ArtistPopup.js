@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Close from './../images/close-button.png'
+import { Link} from "react-router-dom";
+
 //import Title from './Title.js'
 //import PageWrapper from "../components/PageWrapper.js";
 //import { Config } from "../config.js";
@@ -37,7 +39,7 @@ class ArtistPopup extends Component {
                     // maxHeight: "60%",
                     // overflowY: "auto"
                   }}>
-                    <img className="self-end float-right cursor-pointer hover:opacity-50" src={Close} onClick={this.props.closePopup} width="40px" height="40px"/>
+                    <Link to='/artistas'><img className="self-end float-right cursor-pointer hover:opacity-50" src={Close} width="40px" height="40px"/></Link>
                     <h1 className='font-menu uppercase text-3xl mb-6 mt-20' dangerouslySetInnerHTML={{__html: this.props.post.title.rendered}}></h1>
                     <div className=' mb-6 max-w-md mr-6' style={{ overflowY: "auto", maxHeight: '70%'}} dangerouslySetInnerHTML={{__html: this.props.post.content.rendered}}></div>
                   </div>

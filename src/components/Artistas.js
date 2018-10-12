@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import ImageContainer from "./ImageContainer.js"
 import CategoryTitle from "./CategoryTitle.js"
 import ArtistPopup from './ArtistPopup.js'
+import { withRouter, Route, Link} from "react-router-dom";
+
 //import PageWrapper from "../components/PageWrapper.js";
 //import { Config } from "../config.js";
 //import { Title } from "../style-config.js";
@@ -25,13 +27,24 @@ class Artistas extends Component {
       this.setState({ artista: null})
     }
     render() {
-        console.log('posts', this.props.posts)
+        console.log('artistas props', this.props)
         var self = this
-        const posts = this.props.posts.map((post, index) => <div className="md:w-1/3 sm:w-1/2" onClick={this.selectArtista.bind(this, index)}><ImageContainer post={post}  index={index}/></div>)
+        const posts = this.props.posts.map((post, index) =>
+          <Link to={'/artistas/'+post.slug} className="md:w-1/3 sm:w-1/2 no-underline" key={'artista'+index}>
+            <ImageContainer post={post}  index={index}/>
+         </Link>)
 
         var popup = null
-        if(this.state.artista !== null) {
-          popup = <ArtistPopup post={this.props.posts[this.state.artista]} closePopup={this.closePopup}/>
+        // if(this.state.artista !== null) {
+        //
+        //   popup = <ArtistPopup post={this.props.posts[this.state.artista]} closePopup={this.closePopup}/>
+        // }
+        if (this.props.match.params.artista) {
+          this.props.posts.forEach(post => {
+            if(this.props.match.params.artista === post.slug) {
+                popup = <ArtistPopup post={post} closePopup={this.closePopup}/>
+            }
+          })
         }
         return (
           <div>
@@ -45,4 +58,4 @@ class Artistas extends Component {
     }
 }
 
-export default Artistas;
+export default withRouter(Artistas);

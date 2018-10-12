@@ -20,12 +20,13 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 const apiUrl = 'http://api.domolleno.gov.co/wp-json/wp/v2'
 
 const menuComponents = [
-  { route: 'inicio', component: Inicio},
-  { route: 'festivales', component: Festivales},
-  { route: 'como-participar', component: ComoParticipar},
-  { route: 'programacion', component: Programacion},
-  { route: 'artistas', component: Artistas},
-  { route: 'talleres', component: Talleres}
+  { route: 'inicio', component: Inicio, params: ''},
+  { route: 'festivales', component: Festivales, params: ''},
+  { route: 'como-participar', component: ComoParticipar, params: ''},
+  { route: 'programacion', component: Programacion, params: ''},
+  { route: 'artistas', component: Artistas, params: '/:artista'},
+  { route: 'artistas', component: Artistas, params: ''},
+  { route: 'talleres', component: Talleres, params: ''}
 ]
 
 class App extends Component {
@@ -50,8 +51,8 @@ class App extends Component {
 
   getRoutes() {
     return <Switch>
-      {menuComponents.map((item) => <Route path={'/'+item.route}>
-        <item.component posts={this.state.categories[item.route].posts} escenarios={this.state.categories.escenarios.posts}/>
+      {menuComponents.map((item, index) => <Route path={'/'+item.route + item.params}>
+        <item.component posts={this.state.categories[item.route].posts} escenarios={this.state.categories.escenarios.posts} key={'route'+index}/>
     </Route>)}</Switch>
   }
 
