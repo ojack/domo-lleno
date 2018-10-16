@@ -16,7 +16,7 @@ export default THREE => {
       explodeModifier.modify(textGeometry);
 
       var tessellateModifier = new TessellateModifier(4, THREE);
-      for (var i = 0; i < 4; i++) {
+      for (var i = 0; i < 5; i++) {
           tessellateModifier.modify(textGeometry);
       }
 
