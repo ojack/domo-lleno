@@ -6401,6 +6401,16 @@ body::-webkit-scrollbar-track-piece {
   transition: opacity 250ms ease-in;
 }
 
+.artist-popup {
+  max-height: 65%;
+}
+
+@media only screen and (max-width: 800px) {
+  .artist-popup {
+    max-height: 100%;
+  }
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
