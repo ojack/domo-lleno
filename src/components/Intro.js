@@ -26,20 +26,7 @@ class Intro extends Component {
               <div className="fixed pin-t pin-l w-full h-full text-white">
 
                         <div key="title-text-23" className='cursor-pointer'>
-                        <div
-                          style={{
-                            background: "url(/static/images/title-text-v2.png)",
-                            width: '50%',
-                            height: '250px',
-                            minHeight: '100px',
-                            minWidth: '300px',
-                            position: "fixed",
-                            right: "5%",
-                            bottom: "20%",
-                            backgroundSize: 'contain',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat'
-                          }}>
+                        <div className='intro-text'>
                           </div>
                             <div className="fixed pin-b pin-r mr-20 mb-16 text-xl font-menu cursor-pointer" style={{zIndex: 20}}>ENTRAR</div>
 

@@ -148,3 +148,47 @@ body::-webkit-scrollbar-track-piece
         max-height: 100%;
     }
 }
+
+.loader:empty {
+  position: absolute;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+  width: 6em;
+  height: 6em;
+  border: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  border-radius: 50%;
+  animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* responsive image loading */
+.intro-text {
+  background: url(/static/images/title-text-v2-small.png);
+  width: 50%;
+  height: 250px;
+  min-height: 100px;
+  min-width: 300px;
+  position: fixed;
+  right: 5%;
+  bottom: 20%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  .intro-text {
+    background-image: url(/static/images/title-text-v2.png);
+  }
+}

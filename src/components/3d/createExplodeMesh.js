@@ -16,11 +16,12 @@ export default THREE => {
       explodeModifier.modify(textGeometry);
 
       var tessellateModifier = new TessellateModifier(4, THREE);
-      for (var i = 0; i < 6; i++) {
+      for (var i = 0; i < 4; i++) {
           tessellateModifier.modify(textGeometry);
       }
 
       var numFaces = textGeometry.faces.length;
+      console.log('num faces', numFaces)
       var bb = textGeometry.boundingBox;
           var vertices = textGeometry.vertices;
       textGeometry = new THREE.BufferGeometry().fromGeometry( textGeometry )

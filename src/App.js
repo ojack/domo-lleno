@@ -108,6 +108,8 @@ class App extends Component {
   render() {
     // <AnimatedDome key="initial" domeState="closed">
     //  </AnimatedDome>
+
+
     return (
       <Router basename={process.env.PUBLIC_URL}>
 
