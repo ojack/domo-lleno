@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "eb3b6ca4893703f170e2ae84b4836f6d",
-    "url": "/static/media/BlairMdITCTTMedium.eb3b6ca4.woff2"
+    "revision": "350806ee727260f1768a909946c11915",
+    "url": "/static/media/blair-itc-light-webfont.350806ee.woff2"
   },
   {
     "revision": "d7df0f7b62519ce1911f",
@@ -20,16 +20,16 @@ self.__precacheManifest = [
     "url": "/static/media/logo-menu.3c4bdf35.png"
   },
   {
-    "revision": "350806ee727260f1768a909946c11915",
-    "url": "/static/media/blair-itc-light-webfont.350806ee.woff2"
+    "revision": "19bcef7447a304c09184f35156327268",
+    "url": "/static/media/BlairMdITCTTMedium.19bcef74.woff"
   },
   {
     "revision": "d7df0f7b62519ce1911f",
     "url": "/static/js/main.d7df0f7b.chunk.js"
   },
   {
-    "revision": "19bcef7447a304c09184f35156327268",
-    "url": "/static/media/BlairMdITCTTMedium.19bcef74.woff"
+    "revision": "eb3b6ca4893703f170e2ae84b4836f6d",
+    "url": "/static/media/BlairMdITCTTMedium.eb3b6ca4.woff2"
   },
   {
     "revision": "87aa48ad6e032eb6c7f8bb74e50b9d67",
