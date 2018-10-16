@@ -20,16 +20,16 @@ self.__precacheManifest = [
     "url": "/static/media/logo-menu.3c4bdf35.png"
   },
   {
-    "revision": "eb3b6ca4893703f170e2ae84b4836f6d",
-    "url": "/static/media/BlairMdITCTTMedium.eb3b6ca4.woff2"
+    "revision": "350806ee727260f1768a909946c11915",
+    "url": "/static/media/blair-itc-light-webfont.350806ee.woff2"
   },
   {
     "revision": "8958c47962d5fc1a1dff",
     "url": "/static/js/main.8958c479.chunk.js"
   },
   {
-    "revision": "350806ee727260f1768a909946c11915",
-    "url": "/static/media/blair-itc-light-webfont.350806ee.woff2"
+    "revision": "eb3b6ca4893703f170e2ae84b4836f6d",
+    "url": "/static/media/BlairMdITCTTMedium.eb3b6ca4.woff2"
   },
   {
     "revision": "87aa48ad6e032eb6c7f8bb74e50b9d67",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/static/media/blair-itc-bold-webfont.b8b3c22f.woff"
   },
   {
-    "revision": "d0723657794fe042cdca394fa20bf819",
+    "revision": "e92459c88ea6e84b178250f1d00b49f3",
     "url": "/index.html"
   }
 ];
