@@ -33,7 +33,7 @@ const menuList = [
   {
     ID: 4,
     object: 'category',
-    title: '¿Cómo Participar?',
+    title: 'Concurso Domo Lleno',
     url: '/como-participar'
   },
   {
@@ -79,7 +79,7 @@ class Menu extends Component {
     // }
     return(
       <div className = {menuClass} key="main-menu">
-          <Link to='/' className = "flex-1 h-full cursor-pointer m-3 mt-0">
+          <Link to='/' className = "flex-1 h-full cursor-pointer m-3 ml-8 mt-0">
             <div
                 style={{
                   background: "url("+logo+")",
@@ -91,7 +91,7 @@ class Menu extends Component {
                 }}>
             </div>
           </Link>
-          <div className = "ml-12 flex-2.5 h-100 w-100 p-4 flex flex-col sm:flex-row sm:flex-wrap">
+          <div className = "ml-8 flex-2.5 h-100 w-100 p-4 flex flex-col sm:flex-row sm:flex-wrap">
             {menuItems}
           </div>
       </div>

@@ -23,7 +23,7 @@ export default THREE => {
 
   // create camera
   const camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 10000 )
-  camera.position.z = 390
+  camera.position.z = 400
   //camera.position.y = 40
   //camera.position.x = 20
 

@@ -27,7 +27,7 @@ class ImageContainer extends Component {
 
 
             var background = post.acf.image.sizes?'url('+post.acf.image.sizes.large+')':'#222'
-            var hoverClass = "w-full h-full bg-black pt-32 artista"
+            var hoverClass = "w-full h-full bg-black pt-32 inline-block artista"
             if(this.state.hover === true){
               containerClass += " hover"
               hoverClass += " hover"

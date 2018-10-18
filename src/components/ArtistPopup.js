@@ -24,7 +24,7 @@ class ArtistPopup extends Component {
         return (
             <div className="fixed w-full h-full pin-t pin-l flex items-center justify-center flex-col" style={{background: 'rgba(0, 0, 0, 0.6)'}}>
               <div className="w-full max-w-3xl flex overflow-auto md:overflow-visible flex-col artist-popup" style={{background:'url(/static/images/festival-background0.png)', backgroundSize:'cover'}}>
-              <Link to='/artistas' className="absolute -ml-6 mt-6 self-end float-right cursor-pointer hover:opacity-50"><img className="self-end float-right cursor-pointer hover:opacity-50" src={Close} width="40px" height="40px"/></Link>
+              <Link to='/artistas' className="absolute pr-10 pt-10 self-end float-right cursor-pointer hover:opacity-50"><img className="self-end float-right cursor-pointer hover:opacity-50" src={Close} width="30px" height="30px"/></Link>
 
                 <div className="w-full flex flex-col md:flex-row text-left">
 
@@ -41,7 +41,8 @@ class ArtistPopup extends Component {
                     // maxHeight: "60%",
                     // overflowY: "auto"
                   }}>
-                    <h1 className='font-menu uppercase text-3xl mb-6 mt-20' dangerouslySetInnerHTML={{__html: this.props.post.title.rendered}}></h1>
+                    <h1 className='font-menu uppercase text-3xl mb-0 mt-20' dangerouslySetInnerHTML={{__html: this.props.post.title.rendered}}></h1>
+                    <h4 className="text-sm font-menu uppercase -mt-2 ml-2 mb-4">{"»   " + this.props.post.acf.pais}</h4>
                     <div className=' mb-6 max-w-md mr-6' style={{ overflowY: "auto", maxHeight: '70%'}} dangerouslySetInnerHTML={{__html: this.props.post.content.rendered}}></div>
                   </div>
                   </div>

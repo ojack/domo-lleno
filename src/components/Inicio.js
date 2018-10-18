@@ -10,7 +10,7 @@ import TextElement from "./TextElement.js"
 class Inicio extends Component {
     render() {
       console.log('props',this.props)
-        let TitleClass = 'font-menu text-left uppercase mb-2 text-3xl whitespace-no-wrap mt-16 p-6'
+        let TitleClass = 'font-menu text-left uppercase mb-2 text-3xl whitespace-no-wrap mt-16 p-6 pl-3'
 
         // <div className="flex flex-row-reverse">
         //   {this.props.escenarios.map((escenario) => <div>
@@ -49,8 +49,16 @@ class Inicio extends Component {
                             minHeight: '300px'
                           }}>
                           </div>
-
-                          <div className="font-menu mt-3 text-lg text-left"> {post.title.rendered}</div>
+                          <div
+                              className="h-2 mt-5 mr-6"
+                              style={{
+                                backgroundImage: "url(/static/images/underline.png)",
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: '100px',
+                                width: '100px'
+                              }}
+                          ></div>
+                          <div className="font-menu mt-2 text-lg text-left"> {post.title.rendered}</div>
                         </div>
                       )
                   )

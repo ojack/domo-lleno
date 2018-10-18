@@ -1,11 +1,22 @@
 //import Link from "next/link";
 import React, { Component } from "react";
+import Line from './../images/footer-underline.png'
 
 
 const Footer = props => {
-    console.log('footer props!', props)
+    console.log('fline', Line)
     return (
       <div className="flex-1 text-left mt-24 pt-20 text-right flex flex-col mb-24 p-4">
+          <div
+              className="mt-3 mr-6 mb-24"
+              style={{
+                backgroundImage: 'url('+Line+')',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                width: '100%',
+                height: '0.5px'
+              }}
+          ></div>
           <div className="flex flex-col md:flex-row" >
             <div className="font-menu self-start mr-8 ml-4 text-left pt-4" style={{width: '300px'}}>
               <div>Organizadores</div>
