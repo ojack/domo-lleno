@@ -14,11 +14,11 @@ const Footer = props => {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 width: '100%',
-                height: '0.5px'
+                height: '1px'
               }}
           ></div>
           <div className="flex flex-col md:flex-row" >
-            <div className="font-menu self-start mr-8 ml-4 text-left pt-4" style={{width: '300px'}}>
+            <div className="font-menu self-start mr-8 ml-0 text-left pt-4" style={{width: '300px'}}>
               <div>Organizadores</div>
               <div className="mt-4" style={{
                 height: '1px',
@@ -50,7 +50,7 @@ const Footer = props => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row mt-12">
-            <div className="font-menu self-start mr-8 ml-4 text-left pt-4" style={{width: '300px'}}>
+            <div className="font-menu self-start mr-8 ml-0 text-left pt-4" style={{width: '300px'}}>
               <div>Contacto</div>
               <div className="mt-4" style={{
                 height: '1px',
