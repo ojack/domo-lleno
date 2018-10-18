@@ -6,7 +6,7 @@ import Line from './../images/footer-underline.png'
 const Footer = props => {
     console.log('fline', Line)
     return (
-      <div className="flex-1 text-left mt-24 pt-20 text-right flex flex-col mb-24 p-4">
+      <div className="flex-1 text-left mt-32 pt-20 text-right flex flex-col mb-24 p-4">
           <div
               className="mt-3 mr-6 mb-24"
               style={{

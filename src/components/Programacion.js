@@ -15,7 +15,7 @@ class Programacion extends Component {
                 {this.props.posts.map((post, index) => (
                   <img className="flex-1 m-4 mb-12" src={post.acf.imagen.url} />
                 ))}
-                <img className="flex-1 max-w-md m-4 mb-10 mt-10" src='/static/images/programacion-fechas.png' />
+                <img className="m-4 w-full max-w-md mb-10 mt-10" src='/static/images/programacion-fechas.png' />
             </div>
             </div>
         );

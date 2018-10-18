@@ -15,8 +15,8 @@ class Festival extends Component {
         var image = this.props.post.acf.imagen ? 'url('+ this.props.post.acf.imagen.sizes.large +')' : '#222'
         return (
             <div className="flex-1 flex flex-col-reverse md:flex-row-reverse block mt-24 mb-24">
-              <div className="flex-1 text-left pl-24 pt-16 -ml-24 -mt-8 -mb-16 -mr-10" style={{background:'url(/static/images/festival-background'+this.props.index%2+'.png)'}}>
-                <div className="p-10 pr-24">
+              <div className="flex-1 text-left p-6 md:pl-24 md:pt-16 md:-ml-24 md:-mt-8 md:-mb-16 md:-mr-10" style={{background:'url(/static/images/festival-background'+this.props.index%2+'.png)'}}>
+                <div className="p-2 md:p-10 md:pr-24">
                   <h1 className='font-menu uppercase text-3xl mb-6' dangerouslySetInnerHTML={{__html: this.props.post.title.rendered}}></h1>
                   <p className="font-hairline leading-loose"> {this.props.post.acf.texto}</p>
                 </div>
