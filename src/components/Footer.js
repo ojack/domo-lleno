@@ -17,8 +17,8 @@ const Footer = props => {
                 height: '1px'
               }}
           ></div>
-          <div className="flex flex-col md:flex-row" >
-            <div className="font-menu self-start mr-8 ml-0 text-left pt-4" style={{width: '300px'}}>
+          <div className="flex flex-col md:flex-row justify-between" >
+            <div className="font-menu text-2xl self-start mr-8 ml-0 text-left pt-4 text-2xl" style={{width: '300px'}}>
               <div>Organizadores</div>
               <div className="mt-4" style={{
                 height: '1px',
@@ -26,18 +26,19 @@ const Footer = props => {
                 width: '100px'
               }}></div>
             </div>
-            <div className="flex flex-1 flex-row-reverse items-center flex-wrap">
+            <div className="flex flex-1 w-full sm:max-w-lg items-center flex-wrap">
               {props.organizadores.map((post, index) => {
                 var size = "80%"
                 if(index == 0) {
+
                   size = "95%"
-                } else if (index === props.organizadores.length - 1) {
-                  size = "auto 80%"
+                } else if (index === 1) {
+                    size = "75%"
                 }
 
-                return  (<a href={post.acf.url} target="_blank" className="flex-1 m-1" key={"logo"+index} style={{
+                return  (<a href={post.acf.url} target="_blank" className="flex-1 mr-10 sm:mr-24 mb-6" key={"logo"+index} style={{
                   background: 'url('+ post.acf.logo.sizes.medium + ')',
-                  backgroundSize: size,
+                  backgroundSize: 'contain',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
                    minHeight: '120px',
@@ -49,8 +50,8 @@ const Footer = props => {
               })}
             </div>
           </div>
-          <div className="flex flex-col md:flex-row mt-12">
-            <div className="font-menu self-start mr-8 ml-0 text-left pt-4" style={{width: '300px'}}>
+          <div className="flex flex-col mt-8 mb-6 justify-between">
+            <div className="font-menu self-start mr-8 ml-0 text-left text-2xl pt-4" style={{width: '300px'}}>
               <div>Contacto</div>
               <div className="mt-4" style={{
                 height: '1px',
@@ -58,7 +59,7 @@ const Footer = props => {
                 width: '100px'
               }}></div>
             </div>
-            <a className="flex-initial text-left text-xl mt-8 ml-8" href="mailto:domolleno@gmail.com"> domolleno@gmail.com </a>
+            <a className="flex-initial text-left text-xl mt-8 no-underline" href="mailto:domolleno@gmail.com"> domolleno@gmail.com </a>
           </div>
       </div>
     )

@@ -86,11 +86,13 @@ class App extends Component {
                       categories[post.categories[0]].posts.push(post)
                     }
                   })
+                  categoryBySlug.organizadores.posts.reverse()
                   self.setState({ categories: categoryBySlug, loaded: true})
                   //console.log('posts', categoryBySlug)
                   console.log('CAT', categoryBySlug)
                   }
                 })
+
           } else {
             console.log('error fetching categories')
           }
