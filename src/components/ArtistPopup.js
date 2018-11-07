@@ -43,7 +43,7 @@ class ArtistPopup extends Component {
                   }}>
                     <h1 className='font-menu uppercase text-3xl mb-0 mt-20' dangerouslySetInnerHTML={{__html: this.props.post.title.rendered}}></h1>
                     <h4 className="text-sm font-menu uppercase -mt-2 ml-2 mb-4">{"»   " + this.props.post.acf.pais}</h4>
-                    <div className=' mb-6 max-w-md mr-6' style={{ overflowY: "auto", maxHeight: '70%'}} dangerouslySetInnerHTML={{__html: this.props.post.content.rendered}}></div>
+                    <div className=' mb-6 max-w-md mr-6' style={{ overflowY: "auto", maxHeight: '70%'}} dangerouslySetInnerHTML={{__html: this.props.post.acf.descripcion}}></div>
                   </div>
                   </div>
               </div>
