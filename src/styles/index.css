@@ -172,7 +172,7 @@ body::-webkit-scrollbar-track-piece
 
 /* responsive image loading */
 .intro-text {
-  background: url(/static/images/title-text-v2-small.png);
+  background: url(/static/images/title-text-v3-small.png);
   width: 50%;
   height: 250px;
   min-height: 100px;
@@ -189,6 +189,6 @@ body::-webkit-scrollbar-track-piece
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi) {
   .intro-text {
-    background-image: url(/static/images/title-text-v2.png);
+    background-image: url(/static/images/title-text-v3.png);
   }
 }

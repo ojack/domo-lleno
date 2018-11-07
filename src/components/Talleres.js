@@ -8,14 +8,19 @@ import CategoryTitle from "./CategoryTitle.js"
 
 class Talleres extends Component {
     render() {
+        console.log('taller props', this.props)
         return (
           <div>
-          <CategoryTitle title="Talleres y Conferencias" />
+          <CategoryTitle title="Talleres" />
 
-            <div className="flex flex-col-reverse max-w-3xl">
+            <div className="flex flex-col-reverse max-w-3xl mb-10">
                 {this.props.posts.map((post, index) => <Taller post={post} key={index} index={index}/>)}
             </div>
-              </div>
+            <CategoryTitle title="Conferencias" />
+            <div className="flex flex-col-reverse max-w-3xl">
+                {this.props.conferencias.map((post, index) => <Taller post={post} key={index} index={index}/>)}
+            </div>
+          </div>
         );
     }
 }
