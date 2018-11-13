@@ -23,11 +23,11 @@ class TallerContainer extends Component {
     render() {
             var post = this.props.post
           //  console.log("RENDERINF", post)
-            var containerClass = "w-100 cursor-pointer artista-container"
+            var containerClass = "w-100 cursor-pointer taller-container m-10"
 
 
             var background = post.acf.image.sizes?'url('+post.acf.image.sizes.large+')':'#222'
-            var hoverClass = "w-full h-full bg-black inline-block artista"
+            var hoverClass = "w-full h-full bg-black inline-block taller"
             hoverClass += " hover"
             if(this.state.hover === true){
               containerClass += " hover"
@@ -36,6 +36,12 @@ class TallerContainer extends Component {
             //  hoverClass += " hidden"
             }
 
+            // <div className={hoverClass} style={{
+            //   backgroundColor: 'rgba(0, 0, 0, 0.0)'
+            // }}>
+            //
+            // </div>
+            //<div className="w-1/2 h-1/2 mb-6 mt-6 bg-white pin-b pin-l" style={{height: '0.5px'}}></div>
             return (  <div className={containerClass} key={this.props.index}>
 
                         <div className="" style={{
@@ -43,25 +49,22 @@ class TallerContainer extends Component {
                           backgroundSize: 'cover',
                           backgroundRepeat: 'no-repeat',
                           backgroundPosition: 'center',
-                          minWidth: '300px',
-                          height: '300px'
+                          // minWidth: '300px',
+                          height: '200px'
                         }}
                         onMouseEnter={this.handleMouseEnter}
                         onMouseLeave={this.handleMouseLeave}
                         >
-                          <div className={hoverClass} style={{
-                            backgroundColor: 'rgba(0, 0, 0, 0.6)'
-                          }}>
-                              <div className="p-10 pin-b mt-20 text-left w-100 uppercase pin-l pb-8 text-md">
-                                  <h3 >{post.title.rendered}</h3>
-                                  <h4 className="text-sm pt-3">{"»  " + post.acf.artista}</h4>
-                                  <p className="text-sm pt-3 normal-case">{"»  " + post.acf.dia}. {post.acf.horas}. {post.acf.lugar}</p>
-
-
-                              </div>
-                                <div className="w-1/2 h-1/2 mb-2 bg-white pin-b pin-l" style={{height: '0.5px'}}></div>
-                            </div>
                           </div>
+
+
+                          <div className="pl-0 mt-4 text-left w-100 uppercase pb-8 text-md">
+                              <h3 className="font-menu">{post.title.rendered}</h3>
+                              <h4 className="text-sm pt-3">{"»    " + post.acf.artista}</h4>
+                              {post.acf.dia? <p className="text-sm">{"» " + '  '+ post.acf.dia}. {post.acf.lugar}</p> : ''}
+
+                          </div>
+
 
 
                 </div>

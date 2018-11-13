@@ -6367,6 +6367,16 @@ body::-webkit-scrollbar-track-piece {
           filter: grayscale(0%);
 }
 
+.taller-container {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+          filter: grayscale(0%);
+}
+
+.taller-container.hover {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+          filter: grayscale(100%);
+}
+
 .artista.hover {
   opacity: 1;
   transition: opacity 500ms ease-in;
@@ -6402,7 +6412,7 @@ body::-webkit-scrollbar-track-piece {
 }
 
 .artist-popup {
-  max-height: 65%;
+  max-height: 100%;
 }
 
 @media only screen and (max-width: 800px) {

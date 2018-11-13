@@ -26,6 +26,7 @@ const menuComponents = [
   { route: 'programacion', component: Programacion, params: ''},
   { route: 'artistas', component: Artistas, params: '/:artista'},
   { route: 'artistas', component: Artistas, params: ''},
+  { route: 'talleres', component: Talleres, params: '/:taller'},
   { route: 'talleres', component: Talleres, params: ''}
 ]
 
