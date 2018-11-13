@@ -23,7 +23,7 @@ class TallerContainer extends Component {
     render() {
             var post = this.props.post
           //  console.log("RENDERINF", post)
-            var containerClass = "w-100 cursor-pointer taller-container m-10 mb-6"
+            var containerClass = "w-100 cursor-pointer taller-container m-10 mb-0 mt-0"
 
 
             var background = post.acf.image.sizes?'url('+post.acf.image.sizes.large+')':'#222'
