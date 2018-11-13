@@ -6387,6 +6387,15 @@ body::-webkit-scrollbar-track-piece {
   transition: opacity 500ms ease-in;
 }
 
+.taller-details {
+  opacity: .001;
+  transition: opacity 500ms ease-in;
+}
+
+.taller-details.hover {
+  opacity: 1;
+}
+
 .image-50 {
   width: 100%;
   height: auto;

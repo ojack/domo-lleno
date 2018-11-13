@@ -23,17 +23,16 @@ class TallerContainer extends Component {
     render() {
             var post = this.props.post
           //  console.log("RENDERINF", post)
-            var containerClass = "w-100 cursor-pointer taller-container m-10"
+            var containerClass = "w-100 cursor-pointer taller-container m-10 mb-6"
 
 
             var background = post.acf.image.sizes?'url('+post.acf.image.sizes.large+')':'#222'
-            var hoverClass = "w-full h-full bg-black inline-block taller"
-            hoverClass += " hover"
+          //  var hoverClass = "w-full h-full bg-black inline-block taller"
+            var hoverClass = "taller-details"
+          //  hoverClass += " hover"
             if(this.state.hover === true){
               containerClass += " hover"
-              // hoverClass += " hover"
-            } else {
-            //  hoverClass += " hidden"
+              hoverClass += " hover"
             }
 
             // <div className={hoverClass} style={{
@@ -60,8 +59,8 @@ class TallerContainer extends Component {
 
                           <div className="pl-0 mt-4 text-left w-100 uppercase pb-8 text-md">
                               <h3 className="font-menu">{post.title.rendered}</h3>
-                              <h4 className="text-sm pt-3">{"»    " + post.acf.artista}</h4>
-                              {post.acf.dia? <p className="text-sm">{"» " + '  '+ post.acf.dia}. {post.acf.lugar}</p> : ''}
+                              <h4 className={"text-sm pt-3 "+ hoverClass}>{"»    " + post.acf.artista}</h4>
+                              {post.acf.dia? <p className={"text-sm "+ hoverClass} >{"» " + '  '+ post.acf.dia}. {post.acf.lugar}</p> : ''}
 
                           </div>
 
