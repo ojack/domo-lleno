@@ -67,15 +67,15 @@ class Talleres extends Component {
         return (
           <div>
           <CategoryTitle title="Talleres" />
-            <div className="flex flex-wrap max-w-3xl items-center justify-center">
+            <div className="flex flex-wrap max-w-3xl items-start justify-center">
               {posts}
             </div>
             <CategoryTitle title="MasterClass" />
-            <div className="flex flex-wrap max-w-3xl items-center justify-center">
+            <div className="flex flex-wrap max-w-3xl items-start justify-center">
               {masterClass}
             </div>
           <CategoryTitle title="Conferencias" />
-          <div className="flex flex-wrap max-w-3xl items-center justify-center">
+          <div className="flex flex-wrap max-w-3xl items-start justify-center">
             {conferencias}
           </div>
           {popup}
