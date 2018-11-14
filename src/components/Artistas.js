@@ -26,6 +26,7 @@ class Artistas extends Component {
     closePopup() {
       this.setState({ artista: null})
     }
+
     render() {
         console.log('artistas props', this.props)
         var self = this
@@ -33,6 +34,14 @@ class Artistas extends Component {
           <Link to={'/artistas/'+post.slug} className="md:w-1/3 sm:w-1/2 no-underline" key={'artista'+index}>
             <ImageContainer post={post}  index={index}/>
          </Link>)
+
+         const ganadores = this.props.ganadores.map((post, index) =>{
+           post.acf.pais = post.acf.nombre_ganador
+           post.acf.descripcion = post.content.rendered
+           return <Link to={'/artistas/'+post.slug} className="md:w-1/3 sm:w-1/2 no-underline" key={'artista'+index}>
+             <ImageContainer post={post}  index={index}/>
+          </Link>
+      }  )
 
         var popup = null
         // if(this.state.artista !== null) {
@@ -45,12 +54,21 @@ class Artistas extends Component {
                 popup = <ArtistPopup post={post} closePopup={this.closePopup}/>
             }
           })
+          this.props.ganadores.forEach(post => {
+            if(this.props.match.params.artista === post.slug) {
+                popup = <ArtistPopup post={post} closePopup={this.closePopup}/>
+            }
+          })
         }
         return (
           <div>
           <CategoryTitle title="Artistas Invitados" />
-            <div className="flex flex-wrap max-w-3xl items-center justify-center">
+            <div className="flex flex-wrap max-w-3xl items-center justify-center mb-20">
                 {posts}
+            </div>
+            <CategoryTitle title="GANADORES BECA DE CREACIÓN VIDEOARTE PARA DOMO" />
+            <div className="flex flex-wrap max-w-3xl items-center justify-center">
+                {ganadores}
             </div>
             {popup}
           </div>

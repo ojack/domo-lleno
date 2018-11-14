@@ -43,7 +43,7 @@ class ImageContainer extends Component {
                           backgroundRepeat: 'no-repeat',
                           backgroundPosition: 'center',
                           minWidth: '300px',
-                          minHeight: '300px'
+                          height: '300px'
                         }}
                         onMouseEnter={this.handleMouseEnter}
                         onMouseLeave={this.handleMouseLeave}
@@ -51,7 +51,7 @@ class ImageContainer extends Component {
                           <div className={hoverClass} style={{
                             backgroundColor: 'rgba(0, 0, 0, 0.5)'
                           }}>
-                              <div className="p-10 pin-b font-menu text-left w-100 uppercase pin-l pb-16 text-lg">
+                              <div className="p-10 pin-b font-menu text-left w-100 uppercase pin-l pb-12 text-lg">
                                   <h3 >{post.title.rendered}</h3>
                                   <h4 className="text-sm pt-2">{"»  " + post.acf.pais}</h4>
                               </div>
