@@ -46,7 +46,7 @@ class App extends Component {
       menuObj[item.route] = { posts: []}
     })
     menuObj.escenarios = { posts: []}
-    menuObj.conferencias = { posts: [] }
+    // menuObj.conferencias = { posts: [] }
     menuObj.organizadores = { posts: []}
     return menuObj
   }
@@ -54,7 +54,7 @@ class App extends Component {
   getRoutes() {
     return <Switch>
       {menuComponents.map((item, index) => <Route path={'/'+item.route + item.params}>
-        <item.component posts={this.state.categories[item.route].posts} escenarios={this.state.categories.escenarios.posts} conferencias={this.state.categories.conferencias.posts} key={'route'+index}/>
+        <item.component posts={this.state.categories[item.route].posts} escenarios={this.state.categories.escenarios.posts} key={'route'+index}/>
     </Route>)}</Switch>
   }
 
