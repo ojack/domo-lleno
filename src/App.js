@@ -85,8 +85,11 @@ class App extends Component {
                 //console.log('posts', res.body)
                   res.body.forEach((post) => {
                     if (post.categories.length > 0) {
+                      console.log("POST IS", post)
+                      if(categories[post.categories[0]]){
                     //  console.log('id is', post.categories[0], categories[post.categories[0]])
-                      categories[post.categories[0]].posts.push(post)
+                        categories[post.categories[0]].posts.push(post)
+                      }
                     }
                   })
                   categoryBySlug.organizadores.posts.reverse()

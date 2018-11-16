@@ -13,7 +13,7 @@ class Programacion extends Component {
           <CategoryTitle title="Programación" />
             <div className="flex flex-col-reverse max-w-3xl items-center text-center">
                 {this.props.posts.map((post, index) => (
-                  <img className="flex-1 m-4 mb-12" src={post.acf.imagen.url} />
+                  <img className="flex-1 m-4 mt-0 mb-0" src={post.acf.imagen.url} />
                 ))}
                 <img className="m-0 w-full max-w-lg mb-0 mt-0" src='/static/images/programacion-fechas.png' />
             </div>
