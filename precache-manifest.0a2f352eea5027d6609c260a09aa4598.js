@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "350806ee727260f1768a909946c11915",
-    "url": "/static/media/blair-itc-light-webfont.350806ee.woff2"
+    "revision": "19bcef7447a304c09184f35156327268",
+    "url": "/static/media/BlairMdITCTTMedium.19bcef74.woff"
   },
   {
-    "revision": "cd9b318efaf44de673f6",
+    "revision": "ba6f6b6498ac05e42308",
     "url": "/static/css/main.15eca85d.chunk.css"
   },
   {
-    "revision": "44b96c1880f8941e2394",
-    "url": "/static/js/1.44b96c18.chunk.js"
+    "revision": "d87854bfbdffae8b056a",
+    "url": "/static/js/1.d87854bf.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -24,27 +24,27 @@ self.__precacheManifest = [
     "url": "/static/media/BlairMdITCTTMedium.eb3b6ca4.woff2"
   },
   {
-    "revision": "cd9b318efaf44de673f6",
-    "url": "/static/js/main.cd9b318e.chunk.js"
+    "revision": "ba6f6b6498ac05e42308",
+    "url": "/static/js/main.ba6f6b64.chunk.js"
   },
   {
-    "revision": "19bcef7447a304c09184f35156327268",
-    "url": "/static/media/BlairMdITCTTMedium.19bcef74.woff"
-  },
-  {
-    "revision": "e30c7631bb9c404219585bc51f6d1e88",
-    "url": "/static/media/blair-itc-light-webfont.e30c7631.woff"
+    "revision": "350806ee727260f1768a909946c11915",
+    "url": "/static/media/blair-itc-light-webfont.350806ee.woff2"
   },
   {
     "revision": "87aa48ad6e032eb6c7f8bb74e50b9d67",
     "url": "/static/media/blair-itc-bold-webfont.87aa48ad.woff2"
   },
   {
+    "revision": "e30c7631bb9c404219585bc51f6d1e88",
+    "url": "/static/media/blair-itc-light-webfont.e30c7631.woff"
+  },
+  {
     "revision": "b8b3c22fce26c2fb2b6aac4ce7a59660",
     "url": "/static/media/blair-itc-bold-webfont.b8b3c22f.woff"
   },
   {
-    "revision": "fa869be02001f9cf6bf0ae455b0afee2",
+    "revision": "069bf210ee523075640b21b9a6b3dbb4",
     "url": "/index.html"
   }
 ];
