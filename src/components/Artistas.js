@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import ImageContainer from "./ImageContainer.js"
 import CategoryTitle from "./CategoryTitle.js"
 import ArtistPopup from './ArtistPopup.js'
+import ConciertoPopup from './ConciertoPopup.js'
+import ConciertoContainer from "./ConciertoContainer.js"
 import { withRouter, Route, Link} from "react-router-dom";
 
 //import PageWrapper from "../components/PageWrapper.js";
@@ -43,6 +45,14 @@ class Artistas extends Component {
           </Link>
       }  )
 
+
+      var concierto = null
+      if(this.props.concierto && this.props.concierto.acf){
+        concierto = (<Link to={'/artistas/'+this.props.concierto.slug} className="md:w-1/3 sm:w-1/2 no-underline" key={'artistaestados'}>
+            <ConciertoContainer post={this.props.concierto}  index={'estados'}/>
+        </Link>)
+      }
+
         var popup = null
         // if(this.state.artista !== null) {
         //
@@ -59,6 +69,10 @@ class Artistas extends Component {
                 popup = <ArtistPopup post={post} closePopup={this.closePopup}/>
             }
           })
+
+          if(this.props.match.params.artista === this.props.concierto.slug) {
+            popup = <ConciertoPopup post={this.props.concierto} closePopup={this.closePopup}/>
+          }
         }
         return (
           <div>
@@ -66,6 +80,8 @@ class Artistas extends Component {
             <div className="flex flex-wrap max-w-3xl items-center justify-center mb-20">
                 {posts}
             </div>
+            <CategoryTitle title="CONCIERTO DE CIERRE" />
+              {concierto}
             <CategoryTitle title="GANADORES BECA DE CREACIÓN VIDEOARTE PARA DOMO" />
             <div className="flex flex-wrap max-w-3xl items-center justify-center">
                 {ganadores}

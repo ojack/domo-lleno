@@ -35,7 +35,8 @@ class App extends Component {
       super();
       this.state = {
         categories: this.populateCategories(),
-        loaded: false
+        loaded: false,
+        concierto: {}
       }
 
   }
@@ -55,7 +56,7 @@ class App extends Component {
   getRoutes() {
     return <Switch>
       {menuComponents.map((item, index) => <Route path={'/'+item.route + item.params}>
-        <item.component posts={this.state.categories[item.route].posts} escenarios={this.state.categories.escenarios.posts} ganadores={this.state.categories.ganadores.posts} key={'route'+index}/>
+        <item.component posts={this.state.categories[item.route].posts} escenarios={this.state.categories.escenarios.posts} concierto={this.state.concierto} ganadores={this.state.categories.ganadores.posts} key={'route'+index}/>
     </Route>)}</Switch>
   }
 
@@ -84,6 +85,10 @@ class App extends Component {
                 } else {
                 //console.log('posts', res.body)
                   res.body.forEach((post) => {
+                    if(post.slug == "concierto-de-la-banda-estados-alterados-para-el-lanzamiento-de-su-disco-lumisphera") {
+                      console.log("ESTADOS ALTERADOS", post)
+                      this.setState({concierto: post})
+                    }
                     if (post.categories.length > 0) {
                       console.log("POST IS", post)
                       if(categories[post.categories[0]]){
