@@ -18,7 +18,7 @@ class Festival extends Component {
               <div className="flex-1 text-left p-6 md:pl-24 md:pt-16 md:-ml-24 md:-mt-8 md:-mb-16 md:-mr-10" style={{background:'url(/static/images/festival-background'+this.props.index%2+'.png)'}}>
                 <div className="p-2 md:p-10 md:pr-24">
                   <h1 className='font-menu uppercase text-3xl mb-6' dangerouslySetInnerHTML={{__html: this.props.post.title.rendered}}></h1>
-                  <p className="font-hairline leading-loose"> {this.props.post.acf.texto}</p>
+                  <p className="font-hairline leading-loose" dangerouslySetInnerHTML={{__html: this.props.post.acf.texto}}></p>
                 </div>
               </div>
               <div className="flex-1" style={{
